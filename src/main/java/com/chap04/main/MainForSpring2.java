@@ -1,5 +1,8 @@
-package com.chap03;
+package com.chap04.main;
 
+
+import com.chap04.config.AppCtx;
+import com.chap04.spring.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -7,12 +10,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainForSpring {
+public class MainForSpring2 {
 
     private static ApplicationContext ctx = null;
 
     public static void main(String[] args) throws IOException {
-        ctx =new AnnotationConfigApplicationContext(AppConfImport.class);//(AppCtx.class);
+        ctx =new AnnotationConfigApplicationContext(AppCtx.class);
 
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));

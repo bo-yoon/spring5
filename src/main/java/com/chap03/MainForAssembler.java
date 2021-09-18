@@ -18,7 +18,7 @@ public class MainForAssembler {
             if ( comand.startsWith("new")) {
                 processNewCommand(comand.split(" "));
                 continue;
-            } else if(comand.startsWith("change ")) {
+            } else if(comand.startsWith("change")) {
                 processChangeCommand(comand.split(" "));
                 continue;
             }
@@ -30,7 +30,7 @@ public class MainForAssembler {
     private static Assembler assembler = new Assembler();
 
     private static void processChangeCommand(String[] s) {
-        if( s.length != 5 ) {
+        if( s.length != 4 ) {
             printHelp();
             return;
         }
@@ -58,6 +58,7 @@ public class MainForAssembler {
 
     private static void processNewCommand(String[] s) {
         if(s.length != 5 ) {
+            printHelp();
             return;
         }
         MemberRegisterService reqSvc
@@ -80,4 +81,6 @@ public class MainForAssembler {
         }
 
     }
+
+
 }

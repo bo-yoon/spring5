@@ -3,6 +3,7 @@ package com.chap03;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 
+
 public class AppConf2 {
     @Autowired
     private MemberDao memberDao;

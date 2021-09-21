@@ -1,24 +1,22 @@
-package com.chap04.main;
+package com.chap05.main;
 
 
-import com.chap04.config.AppCtx;
-import com.chap04.spring.*;
+import com.chap05.config.AppCtx;
+import com.chap05.spring.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainForSpring2 {
+public class MainForSpring3 {
 
     private static ApplicationContext ctx = null;
 
     public static void main(String[] args) throws IOException {
         ctx =new AnnotationConfigApplicationContext(AppCtx.class);
-//        ctx = new GenericXmlApplicationContext();
-//
+
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));
 
@@ -52,7 +50,7 @@ public class MainForSpring2 {
     }
 
     private static void processVersionCommand() {
-        VersionPrinter versionPrinter = ctx.getBean("versionPrinter",VersionPrinter.class);
+        VersionPrinter versionPrinter = ctx.getBean("versionPrinter", VersionPrinter.class);
         versionPrinter.print();
     }
 

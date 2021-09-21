@@ -3,7 +3,7 @@ package com.chap02;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//                  s@Component
 public class Greater {
     private String format;
 

@@ -1,6 +1,7 @@
-package com.chap07;
+package com.chap07.src;
 
 
+import com.chap07.src.Calculator;
 
 public class ExeTimeCalculator implements Calculator {
 

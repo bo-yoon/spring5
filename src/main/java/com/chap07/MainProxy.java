@@ -1,5 +1,9 @@
 package com.chap07;
 
+import com.chap07.src.ExeTimeCalculator;
+import com.chap07.src.ImpeCalculator;
+import com.chap07.src.RecCalculator;
+
 public class MainProxy {
     public static void main(String[] args) {
         ExeTimeCalculator ttCal1 = new ExeTimeCalculator(new ImpeCalculator());

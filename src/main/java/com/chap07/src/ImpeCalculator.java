@@ -1,6 +1,8 @@
-package com.chap07;
+package com.chap07.src;
 
-public class ImpeCalculator implements Calculator{
+import com.chap07.src.Calculator;
+
+public class ImpeCalculator implements Calculator {
     @Override
     public long factorial(long num) {
         long start = System.currentTimeMillis();

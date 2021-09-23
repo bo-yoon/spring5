@@ -6,10 +6,12 @@ import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 
 import java.util.Arrays;
 
 @Aspect
+//@Order(1)
 public class ExeTimeAspect {
 
     // 적용할 대상
@@ -26,7 +28,7 @@ public class ExeTimeAspect {
             return result;
         } finally {
             long finish = System.nanoTime();
-            Signature sig = joinPoint.getSignature();
+            Signature sig = joinPoint.getSignature(); // 호출되는 메서드에 대한 정보를 구한다.
             System.out.printf("%s.%s(%s) 실행 시간 : %d ns\n",
                     joinPoint.getTarget().getClass().getSimpleName(),
                     sig.getName(), Arrays.toString(joinPoint.getArgs()),
